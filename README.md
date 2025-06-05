@@ -28,7 +28,7 @@ The rulesets described above were implemented in GIS using standard raster proce
 
 Note that the edits made in the Phase 2 part of the project are tailored to the specific conditions of the St. Louis River Estuary Habitat Mapping Project. While the general principles may apply elsewhere, different datasets and rules would need to be used in other study areas.
 
-All data used to implement the rules are available on the geodata@wisconsin geoportal. The LUTs (Look Up Tables) included in this GitHub repository define the class associated with the numerical codes in the GIS layers.
+All data used to implement the rules are available on the geodata@wisconsin geoportal (https://geodata.wisc.edu/). The LUTs (Look Up Tables) included in this GitHub repository define the class associated with the numerical codes in the GIS layers.
 
 ## Imports and other Header Information
 ```python
