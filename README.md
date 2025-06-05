@@ -160,6 +160,30 @@ step2 = stratify(ruleSteps, 1, 'reclassified1')
 ```
 For systems with greater computing power, alternative recursive functions can be written.
 
+## Accuracy Assessment
+
+Accuracy was assessed for the final habitat map after post-processing of the UNET map using the 8 rulesets. This was done by comparing the classes on the map to the classes documented in field-based training polygons. A total of 1,074 polygons were collected in 2023 and another 620 in 2024. To eliminate edge effects (corners of the polygons extending into non-representative areas) a 5-foot internal buffer was applied to create a “skinny” version of the dataset. Some narrow polygons collapsed under this step, leaving a total of 1,595 polygons for the accuracy assessment. The total area of these polygons is about 80 acres (0.32 sq km).
+
+A further complication is that training data for some of the classes on the final habitat map (River-Unconsolidated Bottom, Lake–Littoral, Lake-Limnetic and Pond) were not collected. Thus, there are two versions of the final classification error matrix, one with these classes and one without.
+
+The classification error matrixes (CEMs) are included as JPGs in this GitHub Repository. The CEM with all classes, including those omitted from the training data is called Github_CEM_All and the CEM with omitted classes eliminated is called Github_CEM_Abbrev.
+
+Overall accuracy (Percent Correctly Classified) is 72.7% for CEM_All and 74.9% for CEM_Abbrev. 
+
+Commission errors include: a) areas mapped as Forested Wetland that are actually Forested Upland; b) areas mapped as Unconsolidated Upland that are actually Herbaceous Upland; c) areas mapped as Scrub-Shrub that are actually Forest; and d) areas mapped as Rocky that are actually Cultural. 
+
+Omission errors include: a) areas of Forested Wetland mapped as Forested Upland; b) areas of Unconsolidated Upland mapped as Forested Upland; c) Scrub-Shrub areas mapped as Forest; d) and areas of Herbaceous Upland mapped as Unconsolidated Upland.
+
+## Change Analysis
+
+To perform change analysis, we overlaid the Habitat Map with the Plant Communities and Aquatic Habitats maps from the 2002 survey of the area. A cross-walk was created relating the classes on the Habitat Map to the 2002 map categories. This crosswalk is included in this GitHub repository (Github_HabMap_2002_Xwalk.xlsx). 
+
+In some cases, there are multiple possible categories from 2002. In these cases, we used that category that agreed with the Habitat Map, assuming that no change had occurred. 
+
+The overall agreement between the Habitat Map and the 2002 maps is 73.2%. The full cross-tabulation is included in this GitHub repository as Github_change_matrix.jpg.
+
+Vector and raster versions of the change map are included in the data archive for the project on https://geodata.wisc.edu/ 
+
 ## Acknowledgements
 
 This work was sponsored by the National Estuarine Research Reserve System Science Collaborative, which supports collaborative research that addresses coastal management problems important to the reserves. The Science Collaborative is funded by the National Oceanic and Atmospheric Administration and managed by the University of Michigan Water Center (NA19NOS4190058). The project team is also grateful for the support and assistance provided by the St. Louis River Habitat Workgroup.
